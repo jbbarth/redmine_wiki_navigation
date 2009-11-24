@@ -24,3 +24,8 @@ function toggle_hierarchy_tree(id) {
 <br />
 
 <%= render :partial => "page_element", :locals => {:pages => @pages_by_parent_id} %>
+
+<% content_for :header_tags do %>
+  <%= stylesheet_link_tag "wiki_navigation.css", :plugin => "redmine_wiki_navigation", :media => "screen" %>
+<% end %>
+

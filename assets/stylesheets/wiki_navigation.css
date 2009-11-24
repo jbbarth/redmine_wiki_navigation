@@ -1,0 +1,3 @@
+div span.expander {background-image: url(/images/bullet_toggle_plus.png); padding-left: 7px; margin-left: 0; cursor: pointer;}
+div span.no_expand { padding-left: 7px; margin-left: 0; }
+div span.open {background-image: url(/images/bullet_toggle_minus.png);}
