@@ -1,5 +1,7 @@
 require 'redmine'
 
+require 'wiki_filter_for_hierarchy'
+
 Redmine::Plugin.register :redmine_wiki_navigation do
   name 'Redmine Wiki Navigation plugin'
   author 'Jean-Baptiste BARTH <jeanbaptiste.barth@gmail.com>'

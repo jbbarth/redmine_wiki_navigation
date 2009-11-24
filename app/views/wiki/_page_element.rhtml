@@ -1,0 +1,16 @@
+<% node ||= nil %>
+<% if pages[node] %>
+  <div id="wiki_tree_<%= node %>" style="<%= node.nil? ? "padding:0;" : "padding-left:15px;display:none;" %>">
+    <% pages[node].each do |page| %>
+      <% if pages[page.id] %>
+        <span id="wiki_tree_<%= page.id %>" class="expander" onclick="toggle_hierarchy_tree('wiki_tree_<%= page.id %>');">&nbsp;</span>
+      <% else %>
+        <span class="no_expand">&nbsp;</span>
+      <% end %>
+      <%= link_to(h(page.pretty_title), {:controller => 'wiki', :action => 'index', :id => page.project, :page => page.title}) %><br />
+      <% if pages[page.id] %>
+        <%= render :partial => "page_element", :locals => {:pages => pages, :node => page.id} %>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>
