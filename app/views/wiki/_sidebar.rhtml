@@ -23,7 +23,4 @@ function toggle_hierarchy_tree(id) {
 
 <br />
 
-<% if @pages_by_parent_id.blank? %>
-  BLAH
-<% end %>
-<%= render :partial => "page_element", :locals => {:pages => @pages_by_parent_id || {}} %>
+<%= render :partial => "page_element", :locals => {:pages => @pages_by_parent_id} %>
