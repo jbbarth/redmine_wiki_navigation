@@ -7,7 +7,7 @@
       <% else %>
         <span class="no_expand">&nbsp;</span>
       <% end %>
-      <%= link_to(h(page.short_title), {:controller => 'wiki', :action => 'show', :id => page.project, :page => page.title}) %><br />
+      <%= link_to(h(page.short_title), {:controller => 'wiki', :action => 'show', :project_id => page.project, :id => page.title}) %><br />
       <% if pages[page.id] %>
         <%= render :partial => "page_element", :locals => {:pages => pages, :node => page.id} %>
       <% end %>
